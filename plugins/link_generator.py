@@ -44,8 +44,8 @@ async def batch(client: Client, message: Message):
 async def link_generator(client: Client, message: Message):
     try:
         chat_id = message.chat.id
-        post_message = await client.send_message(chat_id, "Please Wait...!")
-        msg_id = post_message.message_id
+        post_msg = await client.send_message(chat_id, "Please Wait...!")
+        msg_id = post_msg.message_id
     except Exception as e:
         print(e)
         await message.reply_text("Something went Wrong..!")
